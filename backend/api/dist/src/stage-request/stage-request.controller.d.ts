@@ -1,0 +1,623 @@
+import { StageRequestService } from './stage-request.service';
+interface RequestWithUser extends Request {
+    user: any;
+}
+export declare class StageRequestController {
+    private readonly stageRequestService;
+    private readonly logger;
+    constructor(stageRequestService: StageRequestService);
+    createStageRequest(req: RequestWithUser, data: any, files: any): Promise<{
+        success: boolean;
+        message: string;
+        data: {
+            stagiaire: {
+                profile: {
+                    id: string;
+                    userId: string;
+                    nom: string;
+                    prenom: string;
+                    telephone: string | null;
+                    avatar: string | null;
+                    birthDate: Date | null;
+                    school: string | null;
+                    major: string | null;
+                } | null;
+            } & {
+                id: string;
+                createdAt: Date;
+                updatedAt: Date;
+                email: string;
+                passwordHash: string;
+                role: import(".prisma/client").$Enums.UserRole;
+                isActive: boolean;
+                structureId: number | null;
+                notifMessages: boolean | null;
+                notifEvaluation: boolean | null;
+                notifRapports: boolean | null;
+            };
+        } & {
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            status: string;
+            type: string;
+            departement: string;
+            dateDebut: Date;
+            dateFin: Date;
+            motivation: string;
+            competences: string;
+            experience: string;
+            universite: string;
+            domaineEtude: string;
+            anneeEtude: string;
+            code_suivi: string | null;
+            photo: string | null;
+            candidate2Email: string | null;
+            candidate2Photo: string | null;
+            requiresSecondCandidateValidation: boolean;
+            secondCandidateValidated: boolean;
+            secondCandidateUserId: string | null;
+            secondCandidateValidationToken: string | null;
+            secondCandidateValidationExpiresAt: Date | null;
+            stagiaireId: string;
+            cv: string | null;
+            lettreMotivation: string | null;
+            carteIdentite: string | null;
+            inscriptionUniversitaire: string | null;
+            recommandation: string | null;
+            autresDocuments: import("@prisma/client/runtime/library").JsonValue | null;
+        };
+    }>;
+    getMyStageRequests(req: any): Promise<({
+        stagiaire: {
+            profile: {
+                id: string;
+                userId: string;
+                nom: string;
+                prenom: string;
+                telephone: string | null;
+                avatar: string | null;
+                birthDate: Date | null;
+                school: string | null;
+                major: string | null;
+            } | null;
+        } & {
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            email: string;
+            passwordHash: string;
+            role: import(".prisma/client").$Enums.UserRole;
+            isActive: boolean;
+            structureId: number | null;
+            notifMessages: boolean | null;
+            notifEvaluation: boolean | null;
+            notifRapports: boolean | null;
+        };
+    } & {
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        status: string;
+        type: string;
+        departement: string;
+        dateDebut: Date;
+        dateFin: Date;
+        motivation: string;
+        competences: string;
+        experience: string;
+        universite: string;
+        domaineEtude: string;
+        anneeEtude: string;
+        code_suivi: string | null;
+        photo: string | null;
+        candidate2Email: string | null;
+        candidate2Photo: string | null;
+        requiresSecondCandidateValidation: boolean;
+        secondCandidateValidated: boolean;
+        secondCandidateUserId: string | null;
+        secondCandidateValidationToken: string | null;
+        secondCandidateValidationExpiresAt: Date | null;
+        stagiaireId: string;
+        cv: string | null;
+        lettreMotivation: string | null;
+        carteIdentite: string | null;
+        inscriptionUniversitaire: string | null;
+        recommandation: string | null;
+        autresDocuments: import("@prisma/client/runtime/library").JsonValue | null;
+    })[]>;
+    getStageRequestsForDPAF(): Promise<({
+        stagiaire: {
+            stagiaire: ({
+                structure: {
+                    id: number;
+                    createdAt: Date;
+                    updatedAt: Date;
+                    type: string | null;
+                    nomStructure: string;
+                    sigle: string | null;
+                    isDeleted: boolean;
+                    parentId: number | null;
+                } | null;
+            } & {
+                id: string;
+                userId: string;
+                structureAffecteeId: number | null;
+                serviceAffecteId: number | null;
+                tuteurId: string | null;
+            }) | null;
+            profile: {
+                id: string;
+                userId: string;
+                nom: string;
+                prenom: string;
+                telephone: string | null;
+                avatar: string | null;
+                birthDate: Date | null;
+                school: string | null;
+                major: string | null;
+            } | null;
+        } & {
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            email: string;
+            passwordHash: string;
+            role: import(".prisma/client").$Enums.UserRole;
+            isActive: boolean;
+            structureId: number | null;
+            notifMessages: boolean | null;
+            notifEvaluation: boolean | null;
+            notifRapports: boolean | null;
+        };
+    } & {
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        status: string;
+        type: string;
+        departement: string;
+        dateDebut: Date;
+        dateFin: Date;
+        motivation: string;
+        competences: string;
+        experience: string;
+        universite: string;
+        domaineEtude: string;
+        anneeEtude: string;
+        code_suivi: string | null;
+        photo: string | null;
+        candidate2Email: string | null;
+        candidate2Photo: string | null;
+        requiresSecondCandidateValidation: boolean;
+        secondCandidateValidated: boolean;
+        secondCandidateUserId: string | null;
+        secondCandidateValidationToken: string | null;
+        secondCandidateValidationExpiresAt: Date | null;
+        stagiaireId: string;
+        cv: string | null;
+        lettreMotivation: string | null;
+        carteIdentite: string | null;
+        inscriptionUniversitaire: string | null;
+        recommandation: string | null;
+        autresDocuments: import("@prisma/client/runtime/library").JsonValue | null;
+    })[]>;
+    getHistoriqueStagiaires(): Promise<({
+        stagiaire: {
+            stagiaire: ({
+                structure: {
+                    id: number;
+                    createdAt: Date;
+                    updatedAt: Date;
+                    type: string | null;
+                    nomStructure: string;
+                    sigle: string | null;
+                    isDeleted: boolean;
+                    parentId: number | null;
+                } | null;
+                tuteur: ({
+                    user: {
+                        profile: {
+                            id: string;
+                            userId: string;
+                            nom: string;
+                            prenom: string;
+                            telephone: string | null;
+                            avatar: string | null;
+                            birthDate: Date | null;
+                            school: string | null;
+                            major: string | null;
+                        } | null;
+                    } & {
+                        id: string;
+                        createdAt: Date;
+                        updatedAt: Date;
+                        email: string;
+                        passwordHash: string;
+                        role: import(".prisma/client").$Enums.UserRole;
+                        isActive: boolean;
+                        structureId: number | null;
+                        notifMessages: boolean | null;
+                        notifEvaluation: boolean | null;
+                        notifRapports: boolean | null;
+                    };
+                } & {
+                    id: string;
+                    structureId: number | null;
+                    userId: string;
+                    serviceId: number | null;
+                }) | null;
+            } & {
+                id: string;
+                userId: string;
+                structureAffecteeId: number | null;
+                serviceAffecteId: number | null;
+                tuteurId: string | null;
+            }) | null;
+            profile: {
+                id: string;
+                userId: string;
+                nom: string;
+                prenom: string;
+                telephone: string | null;
+                avatar: string | null;
+                birthDate: Date | null;
+                school: string | null;
+                major: string | null;
+            } | null;
+        } & {
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            email: string;
+            passwordHash: string;
+            role: import(".prisma/client").$Enums.UserRole;
+            isActive: boolean;
+            structureId: number | null;
+            notifMessages: boolean | null;
+            notifEvaluation: boolean | null;
+            notifRapports: boolean | null;
+        };
+    } & {
+        id: string;
+        createdAt: Date;
+        updatedAt: Date;
+        status: string;
+        type: string;
+        departement: string;
+        dateDebut: Date;
+        dateFin: Date;
+        motivation: string;
+        competences: string;
+        experience: string;
+        universite: string;
+        domaineEtude: string;
+        anneeEtude: string;
+        code_suivi: string | null;
+        photo: string | null;
+        candidate2Email: string | null;
+        candidate2Photo: string | null;
+        requiresSecondCandidateValidation: boolean;
+        secondCandidateValidated: boolean;
+        secondCandidateUserId: string | null;
+        secondCandidateValidationToken: string | null;
+        secondCandidateValidationExpiresAt: Date | null;
+        stagiaireId: string;
+        cv: string | null;
+        lettreMotivation: string | null;
+        carteIdentite: string | null;
+        inscriptionUniversitaire: string | null;
+        recommandation: string | null;
+        autresDocuments: import("@prisma/client/runtime/library").JsonValue | null;
+    })[]>;
+    approveStageRequest(id: string, req: RequestWithUser): Promise<{
+        success: boolean;
+        message: string;
+        data: {
+            stagiaire: {
+                profile: {
+                    id: string;
+                    userId: string;
+                    nom: string;
+                    prenom: string;
+                    telephone: string | null;
+                    avatar: string | null;
+                    birthDate: Date | null;
+                    school: string | null;
+                    major: string | null;
+                } | null;
+            } & {
+                id: string;
+                createdAt: Date;
+                updatedAt: Date;
+                email: string;
+                passwordHash: string;
+                role: import(".prisma/client").$Enums.UserRole;
+                isActive: boolean;
+                structureId: number | null;
+                notifMessages: boolean | null;
+                notifEvaluation: boolean | null;
+                notifRapports: boolean | null;
+            };
+        } & {
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            status: string;
+            type: string;
+            departement: string;
+            dateDebut: Date;
+            dateFin: Date;
+            motivation: string;
+            competences: string;
+            experience: string;
+            universite: string;
+            domaineEtude: string;
+            anneeEtude: string;
+            code_suivi: string | null;
+            photo: string | null;
+            candidate2Email: string | null;
+            candidate2Photo: string | null;
+            requiresSecondCandidateValidation: boolean;
+            secondCandidateValidated: boolean;
+            secondCandidateUserId: string | null;
+            secondCandidateValidationToken: string | null;
+            secondCandidateValidationExpiresAt: Date | null;
+            stagiaireId: string;
+            cv: string | null;
+            lettreMotivation: string | null;
+            carteIdentite: string | null;
+            inscriptionUniversitaire: string | null;
+            recommandation: string | null;
+            autresDocuments: import("@prisma/client/runtime/library").JsonValue | null;
+        };
+    }>;
+    rejectStageRequest(id: string, motif: string, req: RequestWithUser): Promise<{
+        success: boolean;
+        message: string;
+        data: {
+            stagiaire: {
+                profile: {
+                    id: string;
+                    userId: string;
+                    nom: string;
+                    prenom: string;
+                    telephone: string | null;
+                    avatar: string | null;
+                    birthDate: Date | null;
+                    school: string | null;
+                    major: string | null;
+                } | null;
+            } & {
+                id: string;
+                createdAt: Date;
+                updatedAt: Date;
+                email: string;
+                passwordHash: string;
+                role: import(".prisma/client").$Enums.UserRole;
+                isActive: boolean;
+                structureId: number | null;
+                notifMessages: boolean | null;
+                notifEvaluation: boolean | null;
+                notifRapports: boolean | null;
+            };
+        } & {
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            status: string;
+            type: string;
+            departement: string;
+            dateDebut: Date;
+            dateFin: Date;
+            motivation: string;
+            competences: string;
+            experience: string;
+            universite: string;
+            domaineEtude: string;
+            anneeEtude: string;
+            code_suivi: string | null;
+            photo: string | null;
+            candidate2Email: string | null;
+            candidate2Photo: string | null;
+            requiresSecondCandidateValidation: boolean;
+            secondCandidateValidated: boolean;
+            secondCandidateUserId: string | null;
+            secondCandidateValidationToken: string | null;
+            secondCandidateValidationExpiresAt: Date | null;
+            stagiaireId: string;
+            cv: string | null;
+            lettreMotivation: string | null;
+            carteIdentite: string | null;
+            inscriptionUniversitaire: string | null;
+            recommandation: string | null;
+            autresDocuments: import("@prisma/client/runtime/library").JsonValue | null;
+        };
+    }>;
+    getStatistics(): Promise<{
+        nouveaux: number;
+        enCours: number;
+        confirmes: number;
+        refuses: number;
+        total: number;
+    }>;
+    getRecentStageRequests(): Promise<{
+        id: string;
+        nom: string;
+        email: string;
+        structure: string;
+        typeStage: string;
+        dateSoumission: Date;
+        status: string;
+        code_suivi: string | null;
+    }[]>;
+    checkStageRequestStatus(code_suivi: string, email: string): Promise<{
+        requestId: string | null;
+        submissionDate: Date;
+        status: string;
+        structure: string;
+        lastUpdate: Date;
+    }>;
+    updateDocuments(id: string, req: RequestWithUser, files: any): Promise<{
+        success: boolean;
+        message: string;
+        data: {
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            status: string;
+            type: string;
+            departement: string;
+            dateDebut: Date;
+            dateFin: Date;
+            motivation: string;
+            competences: string;
+            experience: string;
+            universite: string;
+            domaineEtude: string;
+            anneeEtude: string;
+            code_suivi: string | null;
+            photo: string | null;
+            candidate2Email: string | null;
+            candidate2Photo: string | null;
+            requiresSecondCandidateValidation: boolean;
+            secondCandidateValidated: boolean;
+            secondCandidateUserId: string | null;
+            secondCandidateValidationToken: string | null;
+            secondCandidateValidationExpiresAt: Date | null;
+            stagiaireId: string;
+            cv: string | null;
+            lettreMotivation: string | null;
+            carteIdentite: string | null;
+            inscriptionUniversitaire: string | null;
+            recommandation: string | null;
+            autresDocuments: import("@prisma/client/runtime/library").JsonValue | null;
+        };
+    }>;
+    validateSecondCandidate(id: string, req: RequestWithUser): Promise<{
+        success: boolean;
+        message: string;
+        data: {
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            status: string;
+            type: string;
+            departement: string;
+            dateDebut: Date;
+            dateFin: Date;
+            motivation: string;
+            competences: string;
+            experience: string;
+            universite: string;
+            domaineEtude: string;
+            anneeEtude: string;
+            code_suivi: string | null;
+            photo: string | null;
+            candidate2Email: string | null;
+            candidate2Photo: string | null;
+            requiresSecondCandidateValidation: boolean;
+            secondCandidateValidated: boolean;
+            secondCandidateUserId: string | null;
+            secondCandidateValidationToken: string | null;
+            secondCandidateValidationExpiresAt: Date | null;
+            stagiaireId: string;
+            cv: string | null;
+            lettreMotivation: string | null;
+            carteIdentite: string | null;
+            inscriptionUniversitaire: string | null;
+            recommandation: string | null;
+            autresDocuments: import("@prisma/client/runtime/library").JsonValue | null;
+        };
+    }>;
+    uploadCandidate2Photo(id: string, req: RequestWithUser, files: any): Promise<{
+        success: boolean;
+        message: string;
+        data: {
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            status: string;
+            type: string;
+            departement: string;
+            dateDebut: Date;
+            dateFin: Date;
+            motivation: string;
+            competences: string;
+            experience: string;
+            universite: string;
+            domaineEtude: string;
+            anneeEtude: string;
+            code_suivi: string | null;
+            photo: string | null;
+            candidate2Email: string | null;
+            candidate2Photo: string | null;
+            requiresSecondCandidateValidation: boolean;
+            secondCandidateValidated: boolean;
+            secondCandidateUserId: string | null;
+            secondCandidateValidationToken: string | null;
+            secondCandidateValidationExpiresAt: Date | null;
+            stagiaireId: string;
+            cv: string | null;
+            lettreMotivation: string | null;
+            carteIdentite: string | null;
+            inscriptionUniversitaire: string | null;
+            recommandation: string | null;
+            autresDocuments: import("@prisma/client/runtime/library").JsonValue | null;
+        };
+    }>;
+    getSecondCandidateSummary(id: string, token?: string, req?: RequestWithUser): Promise<{
+        success: boolean;
+        data: {
+            id: string;
+            codeSuivi: string | null;
+            type: string;
+            departement: string;
+            dateDebut: Date;
+            dateFin: Date;
+            universite: string;
+            domaineEtude: string;
+            stagiaire: string;
+            candidate2Email: string | null;
+            secondCandidateValidated: boolean;
+            requiresSecondCandidateValidation: true;
+        };
+    }>;
+    refuseSecondCandidate(id: string, req: RequestWithUser): Promise<{
+        success: boolean;
+        message: string;
+        data: {
+            id: string;
+            createdAt: Date;
+            updatedAt: Date;
+            status: string;
+            type: string;
+            departement: string;
+            dateDebut: Date;
+            dateFin: Date;
+            motivation: string;
+            competences: string;
+            experience: string;
+            universite: string;
+            domaineEtude: string;
+            anneeEtude: string;
+            code_suivi: string | null;
+            photo: string | null;
+            candidate2Email: string | null;
+            candidate2Photo: string | null;
+            requiresSecondCandidateValidation: boolean;
+            secondCandidateValidated: boolean;
+            secondCandidateUserId: string | null;
+            secondCandidateValidationToken: string | null;
+            secondCandidateValidationExpiresAt: Date | null;
+            stagiaireId: string;
+            cv: string | null;
+            lettreMotivation: string | null;
+            carteIdentite: string | null;
+            inscriptionUniversitaire: string | null;
+            recommandation: string | null;
+            autresDocuments: import("@prisma/client/runtime/library").JsonValue | null;
+        };
+    }>;
+}
+export {};
