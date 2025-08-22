@@ -1,0 +1,300 @@
+/* Animations pour les SVGs */
+
+/* Animation générale de flottement */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 3s ease-in-out infinite;
+}
+
+/* Animation pour le groupe d'étudiants */
+.student-group-animated {
+  position: relative;
+  transform-origin: center bottom;
+  animation: sway 6s ease-in-out infinite alternate;
+}
+
+@keyframes sway {
+  0% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(2deg);
+  }
+}
+
+/* Animations pour l'illustration du ministère */
+.ministry-building-animated #windows rect {
+  animation: window-blink 3s infinite alternate;
+  animation-delay: var(--delay, 0s);
+  transform-origin: center;
+}
+
+.ministry-building-animated #windows rect:nth-child(1) { --delay: 0.2s; }
+.ministry-building-animated #windows rect:nth-child(2) { --delay: 1.5s; }
+.ministry-building-animated #windows rect:nth-child(3) { --delay: 0.8s; }
+.ministry-building-animated #windows rect:nth-child(4) { --delay: 2.7s; }
+.ministry-building-animated #windows rect:nth-child(5) { --delay: 0.5s; }
+.ministry-building-animated #windows rect:nth-child(6) { --delay: 1.9s; }
+.ministry-building-animated #windows rect:nth-child(7) { --delay: 3.1s; }
+.ministry-building-animated #windows rect:nth-child(8) { --delay: 0.9s; }
+.ministry-building-animated #windows rect:nth-child(9) { --delay: 2.1s; }
+.ministry-building-animated #windows rect:nth-child(10) { --delay: 1.2s; }
+.ministry-building-animated #windows rect:nth-child(11) { --delay: 0.3s; }
+.ministry-building-animated #windows rect:nth-child(12) { --delay: 2.6s; }
+
+@keyframes window-blink {
+  0%, 95% {
+    fill: #90CDF4;
+  }
+  96%, 100% {
+    fill: #FEFCBF;
+  }
+}
+
+.ministry-building-animated #mentor {
+  animation: mentor-move 8s ease-in-out infinite;
+}
+
+@keyframes mentor-move {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+}
+
+.ministry-building-animated #student {
+  animation: student-move 5s ease-in-out infinite;
+}
+
+@keyframes student-move {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Animations pour l'étudiant qui étudie */
+.studying-student-animated #laptop-screen-inner {
+  animation: screen-flicker 4s infinite alternate;
+}
+
+@keyframes screen-flicker {
+  0%, 95% {
+    fill: #90CDF4;
+    opacity: 1;
+  }
+  96%, 100% {
+    fill: #A0AEC0;
+    opacity: 0.8;
+  }
+}
+
+.studying-student-animated #coffee-cup {
+  animation: cup-steam 3s infinite;
+}
+
+@keyframes cup-steam {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-2px) rotate(1deg);
+  }
+}
+
+.studying-student-animated #student {
+  animation: student-typing 2s infinite;
+}
+
+@keyframes student-typing {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+.studying-student-animated #clock #clock-hour {
+  animation: clock-rotate 36s linear infinite;
+  transform-origin: center;
+}
+
+.studying-student-animated #clock #clock-minute {
+  animation: clock-rotate 3s linear infinite;
+  transform-origin: center;
+}
+
+/* Animation pour le bouton CTA */
+.btn-primary.group .absolute {
+  transition: width 0.3s ease;
+}
+
+.cta-badge {
+  position: absolute;
+  animation: shake 1.5s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+}
+
+/* Animation pour les éléments FAQ */
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation générale de scale */
+.hover\:scale-102:hover {
+  transform: scale(1.02);
+}
+
+/* Animations pour la page Login */
+.login-illustration-animated {
+  position: relative;
+  transform-origin: center;
+  animation: login-illustration-float 6s ease-in-out infinite;
+}
+
+@keyframes login-illustration-float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-8px) rotate(1deg);
+  }
+  75% {
+    transform: translateY(8px) rotate(-1deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+/* Animation pour les éléments d'authentification qui clignotent */
+.login-illustration-animated #secure-elements path {
+  animation: secure-pulse 2s infinite alternate;
+  animation-delay: calc(var(--index) * 0.3s);
+  transform-origin: center;
+}
+
+@keyframes secure-pulse {
+  0% {
+    opacity: 0.7;
+    fill: var(--original-color);
+  }
+  100% {
+    opacity: 1;
+    fill: #4C51BF;
+  }
+}
+
+/* Animations pour la page Register */
+.register-illustration-animated {
+  position: relative;
+  transform-origin: center bottom;
+  animation: register-illustration-sway 8s ease-in-out infinite alternate;
+}
+
+@keyframes register-illustration-sway {
+  0% {
+    transform: rotate(-1deg) translateY(0);
+  }
+  50% {
+    transform: rotate(0deg) translateY(-10px);
+  }
+  100% {
+    transform: rotate(1deg) translateY(0);
+  }
+}
+
+.register-illustration-animated #form-elements rect,
+.register-illustration-animated #form-elements circle {
+  animation: form-element-pulse 3s infinite alternate;
+  animation-delay: calc(var(--index) * 0.5s);
+}
+
+@keyframes form-element-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+/* Responsive designs pour les SVGs */
+@media (max-width: 768px) {
+  .student-group-animated,
+  .ministry-building-animated,
+  .studying-student-animated,
+  .login-illustration-animated,
+  .register-illustration-animated {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  
+  /* Animation spéciale pour mobile */
+  .login-illustration-animated,
+  .register-illustration-animated {
+    display: none;
+  }
+  
+  /* Afficher une version mobile simplifiée des illustrations d'authentification */
+  .sm-auth-image {
+    display: block;
+    max-width: 200px;
+    margin: 0 auto 2rem;
+    animation: float 3s ease-in-out infinite;
+  }
+}

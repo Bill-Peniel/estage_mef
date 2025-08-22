@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="600px" viewBox="0 0 800 600" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <g id="students-group" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- Student 1 - Male with laptop -->
+        <g id="student-1" transform="translate(150, 180)">
+            <!-- Laptop -->
+            <rect id="laptop-base" fill="#2A4365" x="40" y="120" width="120" height="80" rx="4"></rect>
+            <rect id="laptop-screen" fill="#90CDF4" x="50" y="130" width="100" height="60" rx="2"></rect>
+            <path id="laptop-keyboard" d="M40,200 L160,200 L170,220 L30,220 Z" fill="#1A202C"></path>
+            
+            <!-- Body -->
+            <ellipse id="body" fill="#2C5282" cx="100" cy="100" rx="50" ry="60"></ellipse>
+            
+            <!-- Head -->
+            <circle id="head" fill="#F6AD55" cx="100" cy="40" r="30"></circle>
+            
+            <!-- Hair -->
+            <path id="hair" d="M70,30 C70,10 130,10 130,30 L130,50 C130,30 70,30 70,50 Z" fill="#2D3748"></path>
+            
+            <!-- Eyes -->
+            <circle id="eye-left" fill="#2D3748" cx="85" cy="35" r="3"></circle>
+            <circle id="eye-right" fill="#2D3748" cx="115" cy="35" r="3"></circle>
+            
+            <!-- Smile -->
+            <path id="smile" d="M85,50 C85,60 115,60 115,50" stroke="#2D3748" stroke-width="2" stroke-linecap="round"></path>
+            
+            <!-- Arms -->
+            <path id="arm-left" d="M50,100 C30,110 20,130 40,160" stroke="#F6AD55" stroke-width="10" stroke-linecap="round"></path>
+            <path id="arm-right" d="M150,100 C170,110 180,130 160,160" stroke="#F6AD55" stroke-width="10" stroke-linecap="round"></path>
+        </g>
+        
+        <!-- Student 2 - Female with book -->
+        <g id="student-2" transform="translate(400, 200)">
+            <!-- Book -->
+            <rect id="book-cover" fill="#9F7AEA" x="20" y="120" width="60" height="80" rx="2"></rect>
+            <rect id="book-pages" fill="#F7FAFC" x="80" y="120" width="10" height="80" rx="1"></rect>
+            <rect id="book-line1" fill="#4A5568" x="30" y="140" width="40" height="2" rx="1"></rect>
+            <rect id="book-line2" fill="#4A5568" x="30" y="150" width="40" height="2" rx="1"></rect>
+            <rect id="book-line3" fill="#4A5568" x="30" y="160" width="30" height="2" rx="1"></rect>
+            
+            <!-- Body -->
+            <path id="dress" d="M100,90 L140,180 L60,180 Z" fill="#B794F4"></path>
+            <ellipse id="body-top" fill="#B794F4" cx="100" cy="100" rx="40" ry="30"></ellipse>
+            
+            <!-- Head -->
+            <circle id="head" fill="#F6AD55" cx="100" cy="40" r="30"></circle>
+            
+            <!-- Hair -->
+            <path id="hair-back" d="M70,40 C70,80 130,80 130,40" fill="#6B46C1"></path>
+            <path id="hair-top" d="M70,40 C70,0 130,0 130,40" fill="#6B46C1"></path>
+            
+            <!-- Eyes -->
+            <circle id="eye-left" fill="#2D3748" cx="85" cy="35" r="3"></circle>
+            <circle id="eye-right" fill="#2D3748" cx="115" cy="35" r="3"></circle>
+            
+            <!-- Smile -->
+            <path id="smile" d="M85,50 C85,60 115,60 115,50" stroke="#2D3748" stroke-width="2" stroke-linecap="round"></path>
+            
+            <!-- Arms -->
+            <path id="arm-left" d="M60,100 C40,110 30,130 60,150" stroke="#F6AD55" stroke-width="10" stroke-linecap="round"></path>
+            <path id="arm-right" d="M140,100 C160,110 160,130 130,150" stroke="#F6AD55" stroke-width="10" stroke-linecap="round"></path>
+        </g>
+        
+        <!-- Student 3 - Graduate with certificate -->
+        <g id="student-3" transform="translate(600, 180)">
+            <!-- Certificate -->
+            <rect id="certificate" fill="#F7FAFC" x="30" y="120" width="80" height="60" rx="2"></rect>
+            <rect id="certificate-line1" fill="#4A5568" x="40" y="140" width="60" height="2" rx="1"></rect>
+            <rect id="certificate-line2" fill="#4A5568" x="40" y="150" width="60" height="2" rx="1"></rect>
+            <rect id="certificate-line3" fill="#4A5568" x="40" y="160" width="40" height="2" rx="1"></rect>
+            <circle id="certificate-seal" fill="#F56565" cx="100" cy="170" r="10"></circle>
+            
+            <!-- Graduation Cap -->
+            <rect id="cap-base" fill="#1A202C" x="70" y="15" width="60" height="15" rx="2"></rect>
+            <polygon id="cap-top" fill="#1A202C" points="100,0 140,25 60,25"></polygon>
+            <circle id="cap-button" fill="#F6E05E" cx="100" cy="5" r="5"></circle>
+            <path id="cap-tassel" d="M140,25 C140,25 160,40 150,60" stroke="#F6E05E" stroke-width="3" stroke-linecap="round"></path>
+            
+            <!-- Head -->
+            <circle id="head" fill="#F6AD55" cx="100" cy="50" r="30"></circle>
+            
+            <!-- Eyes -->
+            <circle id="eye-left" fill="#2D3748" cx="85" cy="45" r="3"></circle>
+            <circle id="eye-right" fill="#2D3748" cx="115" cy="45" r="3"></circle>
+            
+            <!-- Smile -->
+            <path id="smile" d="M85,60 C85,70 115,70 115,60" stroke="#2D3748" stroke-width="2" stroke-linecap="round"></path>
+            
+            <!-- Body / Graduation Gown -->
+            <path id="gown" d="M60,90 L50,200 L150,200 L140,90" fill="#2C5282"></path>
+            <path id="gown-middle" d="M80,90 L100,180 L120,90" fill="#2A4365"></path>
+            
+            <!-- Arms -->
+            <path id="arm-left" d="M60,120 C40,130 30,150 60,170" stroke="#F6AD55" stroke-width="10" stroke-linecap="round"></path>
+            <path id="arm-right" d="M140,120 C160,130 160,150 130,170" stroke="#F6AD55" stroke-width="10" stroke-linecap="round"></path>
+        </g>
+    </g>
+</svg>

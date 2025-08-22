@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="600px" viewBox="0 0 800 600" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <g id="internship-illustration" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- Office Building -->
+        <g id="building" transform="translate(100, 100)">
+            <!-- Building Structure -->
+            <rect id="building-base" fill="#2A4365" x="0" y="100" width="300" height="300" rx="4"></rect>
+            
+            <!-- Windows -->
+            <g id="windows" fill="#90CDF4">
+                <rect x="30" y="130" width="50" height="50" rx="2"></rect>
+                <rect x="30" y="200" width="50" height="50" rx="2"></rect>
+                <rect x="30" y="270" width="50" height="50" rx="2"></rect>
+                <rect x="30" y="340" width="50" height="50" rx="2"></rect>
+                
+                <rect x="120" y="130" width="50" height="50" rx="2"></rect>
+                <rect x="120" y="200" width="50" height="50" rx="2"></rect>
+                <rect x="120" y="270" width="50" height="50" rx="2"></rect>
+                <rect x="120" y="340" width="50" height="50" rx="2"></rect>
+                
+                <rect x="210" y="130" width="50" height="50" rx="2"></rect>
+                <rect x="210" y="200" width="50" height="50" rx="2"></rect>
+                <rect x="210" y="270" width="50" height="50" rx="2"></rect>
+                <rect x="210" y="340" width="50" height="50" rx="2"></rect>
+            </g>
+            
+            <!-- Door -->
+            <rect id="door-frame" fill="#1A202C" x="125" y="350" width="40" height="50" rx="2"></rect>
+            <rect id="door" fill="#2C5282" x="130" y="355" width="30" height="45" rx="1"></rect>
+            <circle id="door-handle" fill="#F6AD55" cx="150" cy="375" r="3"></circle>
+            
+            <!-- Roof -->
+            <path id="roof" d="M-20,100 L320,100 L150,20 Z" fill="#1A365D"></path>
+            
+            <!-- Ministry Sign -->
+            <rect id="sign-bg" fill="#E2E8F0" x="80" y="50" width="140" height="30" rx="4"></rect>
+            <text id="sign-text" font-family="Arial" font-size="14" font-weight="bold" fill="#2A4365">
+                <tspan x="90" y="70">MINISTÈRE ÉCONOMIE</tspan>
+            </text>
+        </g>
+        
+        <!-- Student and Mentor Meeting -->
+        <g id="meeting" transform="translate(450, 200)">
+            <!-- Desk -->
+            <rect id="desk" fill="#805AD5" x="0" y="180" width="250" height="20" rx="2"></rect>
+            <rect id="desk-leg-left" fill="#805AD5" x="20" y="200" width="15" height="100" rx="1"></rect>
+            <rect id="desk-leg-right" fill="#805AD5" x="215" y="200" width="15" height="100" rx="1"></rect>
+            
+            <!-- Documents on Desk -->
+            <rect id="document1" fill="#F7FAFC" x="40" y="165" width="60" height="15" rx="1"></rect>
+            <rect id="document2" fill="#F7FAFC" x="130" y="170" width="50" height="10" rx="1"></rect>
+            <rect id="document3" fill="#F7FAFC" x="190" y="165" width="40" height="15" rx="1"></rect>
+            
+            <!-- Mentor Character -->
+            <g id="mentor" transform="translate(30, 0)">
+                <!-- Body -->
+                <path id="suit" d="M30,90 L10,200 L60,200 L40,90" fill="#2D3748"></path>
+                <rect id="collar" fill="#F7FAFC" x="30" y="95" width="10" height="15" rx="2"></rect>
+                <rect id="tie" fill="#F56565" x="33" y="110" width="4" height="30" rx="1"></rect>
+                
+                <!-- Head -->
+                <circle id="head" fill="#F6AD55" cx="35" cy="60" r="25"></circle>
+                
+                <!-- Hair -->
+                <path id="hair" d="M15,55 C15,35 55,35 55,55" fill="#A0AEC0"></path>
+                
+                <!-- Eyes -->
+                <circle id="eye-left" fill="#2D3748" cx="25" cy="55" r="2"></circle>
+                <circle id="eye-right" fill="#2D3748" cx="45" cy="55" r="2"></circle>
+                
+                <!-- Smile -->
+                <path id="smile" d="M25,70 C25,75 45,75 45,70" stroke="#2D3748" stroke-width="1.5" stroke-linecap="round"></path>
+                
+                <!-- Glasses -->
+                <circle id="glasses-left" stroke="#4A5568" stroke-width="1.5" fill="none" cx="25" cy="55" r="7"></circle>
+                <circle id="glasses-right" stroke="#4A5568" stroke-width="1.5" fill="none" cx="45" cy="55" r="7"></circle>
+                <line x1="32" y1="55" x2="38" y2="55" stroke="#4A5568" stroke-width="1.5"></line>
+                
+                <!-- Arms -->
+                <path id="arm-left" d="M20,110 C0,120 -10,140 20,160" stroke="#F6AD55" stroke-width="8" stroke-linecap="round"></path>
+                <path id="arm-right" d="M50,110 C70,120 70,140 60,160" stroke="#F6AD55" stroke-width="8" stroke-linecap="round"></path>
+            </g>
+            
+            <!-- Student Character -->
+            <g id="student" transform="translate(180, 10)">
+                <!-- Body -->
+                <ellipse id="body" fill="#3182CE" cx="35" cy="100" rx="25" ry="40"></ellipse>
+                
+                <!-- Head -->
+                <circle id="head" fill="#F6AD55" cx="35" cy="50" r="25"></circle>
+                
+                <!-- Hair -->
+                <path id="hair" d="M10,40 C10,20 60,20 60,40 L60,55 C60,35 10,35 10,55 Z" fill="#2D3748"></path>
+                
+                <!-- Eyes -->
+                <circle id="eye-left" fill="#2D3748" cx="25" cy="45" r="2"></circle>
+                <circle id="eye-right" fill="#2D3748" cx="45" cy="45" r="2"></circle>
+                
+                <!-- Smile -->
+                <path id="smile" d="M25,60 C25,65 45,65 45,60" stroke="#2D3748" stroke-width="1.5" stroke-linecap="round"></path>
+                
+                <!-- Arms -->
+                <path id="arm-left" d="M10,100 C-10,110 -20,130 0,160" stroke="#F6AD55" stroke-width="8" stroke-linecap="round"></path>
+                <path id="arm-right" d="M60,100 C80,110 75,140 60,160" stroke="#F6AD55" stroke-width="8" stroke-linecap="round"></path>
+                
+                <!-- Resume in Hand -->
+                <rect id="resume" fill="#F7FAFC" x="0" y="160" width="40" height="30" rx="2"></rect>
+                <rect id="resume-line1" fill="#4A5568" x="5" y="170" width="30" height="1.5" rx="0.75"></rect>
+                <rect id="resume-line2" fill="#4A5568" x="5" y="175" width="30" height="1.5" rx="0.75"></rect>
+                <rect id="resume-line3" fill="#4A5568" x="5" y="180" width="20" height="1.5" rx="0.75"></rect>
+            </g>
+            
+            <!-- Table Plants -->
+            <g id="plant" transform="translate(100, 150)">
+                <rect id="pot" fill="#E53E3E" x="10" y="20" width="20" height="15" rx="2"></rect>
+                <path id="leaves" d="M20,0 C25,5 30,15 20,20 C10,15 15,5 20,0 Z" fill="#48BB78"></path>
+                <path id="stem" d="M20,20 L20,10" stroke="#48BB78" stroke-width="2" stroke-linecap="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>

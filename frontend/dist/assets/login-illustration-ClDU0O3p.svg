@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="500px" height="400px" viewBox="0 0 500 400" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <g id="login-illustration" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- Background Elements -->
+        <circle id="bg-circle-1" fill="#EBF4FF" opacity="0.6" cx="100" cy="330" r="70"></circle>
+        <circle id="bg-circle-2" fill="#E6FFFA" opacity="0.6" cx="400" cy="150" r="50"></circle>
+        <path id="bg-wave" d="M0,350 C50,320 100,380 150,350 C200,320 250,380 300,350 C350,320 400,380 450,350 C500,320 550,380 600,350 L600,400 L0,400 Z" fill="#E6FFFA" opacity="0.3"></path>
+        
+        <!-- Login Form -->
+        <g id="login-form" transform="translate(260, 170)">
+            <rect id="form-background" fill="#FFFFFF" x="0" y="0" width="170" height="200" rx="8" filter="drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1))"></rect>
+            <rect id="form-header" fill="#276749" x="0" y="0" width="170" height="40" rx="8 8 0 0"></rect>
+            <text id="form-title" font-family="Arial" font-size="14" font-weight="bold" fill="#FFFFFF">
+                <tspan x="60" y="25">Connexion</tspan>
+            </text>
+            
+            <!-- Form Fields -->
+            <rect id="email-field" fill="#F7FAFC" x="15" y="55" width="140" height="30" rx="4"></rect>
+            <text id="email-placeholder" font-family="Arial" font-size="10" fill="#A0AEC0">
+                <tspan x="25" y="75">Email</tspan>
+            </text>
+            
+            <rect id="password-field" fill="#F7FAFC" x="15" y="100" width="140" height="30" rx="4"></rect>
+            <text id="password-placeholder" font-family="Arial" font-size="10" fill="#A0AEC0">
+                <tspan x="25" y="120">Mot de passe</tspan>
+            </text>
+            
+            <rect id="submit-button" fill="#276749" x="15" y="150" width="140" height="35" rx="4"></rect>
+            <text id="submit-text" font-family="Arial" font-size="12" font-weight="bold" fill="#FFFFFF">
+                <tspan x="65" y="173">Connexion</tspan>
+            </text>
+        </g>
+        
+        <!-- Character -->
+        <g id="character" transform="translate(60, 150)">
+            <!-- Body -->
+            <rect id="body" fill="#3182CE" x="70" y="70" width="60" height="100" rx="20"></rect>
+            
+            <!-- Head -->
+            <circle id="head" fill="#F6AD55" cx="100" cy="50" r="30"></circle>
+            
+            <!-- Hair -->
+            <path id="hair" d="M70,50 C70,25 130,25 130,50 L120,60 C120,40 80,40 80,60 Z" fill="#2D3748"></path>
+            
+            <!-- Eyes -->
+            <circle id="eye-left" fill="#2D3748" cx="90" cy="45" r="3"></circle>
+            <circle id="eye-right" fill="#2D3748" cx="110" cy="45" r="3"></circle>
+            
+            <!-- Smile -->
+            <path id="smile" d="M85,60 C85,70 115,70 115,60" stroke="#2D3748" stroke-width="2" stroke-linecap="round"></path>
+            
+            <!-- Arms -->
+            <path id="arm-left" d="M70,90 C50,85 30,100 20,140" stroke="#F6AD55" stroke-width="10" stroke-linecap="round"></path>
+            <circle id="hand-pointer" fill="#F6AD55" cx="20" cy="140" r="8"></circle>
+            
+            <path id="arm-right" d="M130,90 C150,100 160,120 150,160" stroke="#F6AD55" stroke-width="10" stroke-linecap="round"></path>
+            
+            <!-- Connection Line -->
+            <path id="connection-line" d="M20,140 C50,170 150,170 240,110" stroke="#4299E1" stroke-width="2" stroke-dasharray="5,5" stroke-linecap="round"></path>
+            <circle id="connection-dot" fill="#4299E1" cx="240" cy="110" r="5"></circle>
+        </g>
+        
+        <!-- Security Elements -->
+        <g id="security-elements" transform="translate(170, 80)">
+            <circle id="lock-circle" fill="#EDF2F7" cx="40" cy="40" r="30"></circle>
+            <rect id="lock-body" fill="#4A5568" x="25" y="40" width="30" height="25" rx="4"></rect>
+            <rect id="lock-top" fill="#4A5568" x="32" y="25" width="16" height="20" rx="8"></rect>
+            <circle id="lock-keyhole" fill="#EDF2F7" cx="40" cy="50" r="5"></circle>
+        </g>
+        
+        <!-- Decorative Elements -->
+        <g id="decorations">
+            <circle id="deco-circle-1" fill="#FEB2B2" cx="400" cy="90" r="8"></circle>
+            <circle id="deco-circle-2" fill="#FEB2B2" cx="420" cy="70" r="5"></circle>
+            <circle id="deco-circle-3" fill="#FEB2B2" cx="430" cy="95" r="3"></circle>
+            
+            <circle id="deco-circle-4" fill="#9AE6B4" cx="70" cy="200" r="6"></circle>
+            <circle id="deco-circle-5" fill="#9AE6B4" cx="50" cy="220" r="4"></circle>
+            <circle id="deco-circle-6" fill="#9AE6B4" cx="85" cy="230" r="3"></circle>
+        </g>
+    </g>
+</svg>
